@@ -1,0 +1,7 @@
+
+app_data.db
+task
+goreleaser
+
+!task/
+dist/
