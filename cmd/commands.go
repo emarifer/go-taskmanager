@@ -16,6 +16,8 @@ import (
 	"gorm.io/gorm"
 )
 
+const VERSION = "1.0.3"
+
 func Execute(db *gorm.DB) {
 
 	var cmdAdd = &cobra.Command{
@@ -154,8 +156,9 @@ func Execute(db *gorm.DB) {
 	}
 
 	var rootCmd = &cobra.Command{
-		Use:   "task",
-		Short: "task is a command line application for managing to-do tasks.",
+		Use:     "task",
+		Version: VERSION,
+		Short:   "task is a command line application for managing to-do tasks.",
 	}
 	rootCmd.AddCommand(cmdAdd)
 	rootCmd.AddCommand(cmdList)
